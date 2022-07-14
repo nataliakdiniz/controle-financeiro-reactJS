@@ -1,4 +1,5 @@
 import React, { useState } from 'react'
+import Grid from '../Grid'
 import * as C from './style'
 
 const Form = ({ handleAdd, transactionsList, setTransactionsList }) => {
@@ -10,12 +11,21 @@ const Form = ({ handleAdd, transactionsList, setTransactionsList }) => {
 
   const handleSave = () => {
     if (!desc || !amount) {
-      alert('Informe a descrição e o valor!')
+      alert('Por favor, informe a descrição e o valor!')
       return
     } else if (amount < 1) {
-      alert('O valor tem que ser positivo!')
+      alert('O valor deve ser positivo!')
       return
     }
+    const transaction = {
+      id: generateID(),
+      desc: desc,
+      amount: amount,
+      expense: isExpense
+    }
+    handleAdd(transaction)
+    setDesc('')
+    setAmount('')
   }
 
   return (
@@ -52,6 +62,7 @@ const Form = ({ handleAdd, transactionsList, setTransactionsList }) => {
         </C.RadioGroup>
         <C.Button onClick={handleSave}>ADICIONAR</C.Button>
       </C.Container>
+      <Grid itens={transactionsList} setItens={setTransactionsList} />
     </>
   )
 }
