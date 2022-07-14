@@ -24,7 +24,7 @@ I hope you like it!
 ## App:
 
 
-![Homepage image](http://www.giphy.com/gifs/8cpg7BPGvUhv9nRAYk)
+![Homepage image](https://media2.giphy.com/media/8cpg7BPGvUhv9nRAYk/giphy.gif?cid=790b761117df5addea4450e75a70bd747c4bcabd43ed12ae&rid=giphy.gif&ct=g)
 
   ## Authors
 
